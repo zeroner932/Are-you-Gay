@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>جرب تضغط الزر 😈</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #000000;
+      color: white;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+        padding-top: 100px;
+      margin-top: 50px;
+    }
+    .yes{
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.5s ease;
+
+    }
+    #runawayBtn {
+      padding: 15px 30px;
+      font-size: 18px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Are you gay?</h1>
+<button id="runawayBtn">No</button>
+<button class="yes">Yes</button>
+
+<script>
+  const btn = document.getElementById('runawayBtn');
+
+  btn.addEventListener('mouseover', () => {
+    const maxX = window.innerWidth - btn.offsetWidth;
+    const maxY = window.innerHeight - btn.offsetHeight;
+    
+    const newX = Math.floor(Math.random() * maxX);
+    const newY = Math.floor(Math.random() * maxY);
+    
+    btn.style.left = `${newX}px`;
+    btn.style.top = `${newY}px`;
+  });
+</script>
+
+</body>
+</html>
